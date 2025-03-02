@@ -102,43 +102,6 @@
         <div class="tab-content">콘텐츠 영역</div>
     </div>
 
-    <script>
-        const canvas = document.getElementById('animationCanvas');
-        const ctx = canvas.getContext('2d');
-        const codeEditor = document.querySelector(".code-editor");
-        
-        canvas.width = 160;
-        canvas.height = 90;
-        
-        function drawGrid() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.strokeStyle = '#ddd';
-            ctx.lineWidth = 1;
-            
-            for (let x = 0; x <= canvas.width; x += 10) {
-                ctx.beginPath();
-                ctx.moveTo(x, 0);
-                ctx.lineTo(x, canvas.height);
-                ctx.stroke();
-            }
-            
-            for (let y = 0; y <= canvas.height; y += 10) {
-                ctx.beginPath();
-                ctx.moveTo(0, y);
-                ctx.lineTo(canvas.width, y);
-                ctx.stroke();
-            }
-        }
-        
-        drawGrid();
-        
-        function runAnimation() {
-            const code = codeEditor.innerText.trim();
-            console.log("실행할 코드:", code);
-            // 이후 코드 파싱 및 실행 로직 추가 예정
-        }
-        
-        document.querySelector(".play").addEventListener("click", runAnimation);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
