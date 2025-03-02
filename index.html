@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 에디터</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .code-editor {
+            flex: 2;
+            background: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 10px;
+            resize: vertical;
+            overflow: auto;
+        }
+        .controls {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background: #ddd;
+        }
+        .controls button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .play { background: green; color: white; }
+        .pause { background: orange; color: white; }
+        .stop { background: red; color: white; }
+        .tab-menu {
+            display: flex;
+            background: #333;
+            color: white;
+        }
+        .tab-menu div {
+            padding: 10px;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+        }
+        .tab-menu div:hover {
+            background: #555;
+        }
+        .tab-content {
+            flex: 1;
+            padding: 20px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="code-editor" contenteditable="true">// 애니메이션 코드를 입력하세요...</div>
+        
+        <div class="controls">
+            <button class="play">▶</button>
+            <button class="pause">⏸</button>
+            <button class="stop">🛑</button>
+        </div>
+
+        <div class="tab-menu">
+            <div>코드 작성</div>
+            <div>프레임</div>
+            <div>터미널</div>
+            <div>설정</div>
+            <div>사진/오디오/gif</div>
+            <div>추가 기능</div>
+        </div>
+
+        <div class="tab-content">콘텐츠 영역</div>
+    </div>
+</body>
+</html>
